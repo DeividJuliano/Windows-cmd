@@ -1,0 +1,70 @@
+winget upgrade --all  #atualizar todos os programas 
+ ncpa.cpl (propriedades do adaptador de redes)
+control userpasswords2(chamar o controle de usuário via interface)
+nslookup  xxxx ou nome do host(dns servidor)
+arp -a (lista todos os hosts Mac da rede)
+msconfig
+cls (limpa tela do terminal)
+gpedit.msc (ou baixa no azarado)
+
+powercfg -h off #Desliga rápido CMD como administrador
+netstat –e  (exibe estatísticas sobre a interface Ethernet do computador)
+netstat –n (conexões ativas)
+netstat –s (Exibe estatística por protocolo)
+netstat –p (Mostra conexões para o protocolo especificado por protocolo)
+netstat –r (Exibe o conteúdo da tabela de roteamento do computador)
+netstat –s –p ip 10 ( exibir as estatísticas do protocolo IP e irá atualizá-las a cada 10 segundos ctrl+c para suspender o comando.
+ping xxxx -t -l 30000 (força pacotes grande)
+ping -l 96 ping.oline.net  (força pacotes grandes)
+ping -n 2 xxxxxx   (envia 2 pacotes)
+ping -i 3 mirosoft.com (serve para delimitar salto)
+ping -l 1500 ping.online.net -f (não fragmentar o pacote)
+ping -t 8.8.8.8 ( forma continua)
+ping -a  8.8.8.8 (pinga e resolve o nome)
+pathping 1.1.1.1 -n -q 5 (rastreia as rotas e fornece estatiscas dos 5 pacotes
+ipconfig /all
+netstat –a (conexôes,portas)
+route print (rotas ativas)
+ipconfig  /renew
+ipconfig  /release
+msinfo32 (informação do sistema)
+lusrmgr.msc (acessa o gerenciamento de usuários)
+tracert 8.8.8.8 (exibe rotas da origem até o destino)
+cd.. (voltar)
+dir   (mostrar conteúdos)
+cd users (entrar na pasta users)
+cd:\users\pc-deivid\desktop\documentos (caminho para chegar na pasta documentos)
+Gravar tela do windows > win+G
+sfc /scannow  (reparar e corrigi erros)
+CHKDSK /R (reparar setores ruins do hd)
+CHKDSK /r /f (forçar a reparar) tente entrando na unidade c: enter e digite o comando acima.
+Para o win iniciar no soluções de problema
+shutdown /r /f /o /t 0
+mdsched.exe (teste de memória)
+Win 7 modo de segurança f8/f12
+diskpart
+lista vol
+exit
+d:\setup.exe (inicia uma configuração na unidade)
+
+diskpart
+list disk
+select disk 0
+clean
+exit
+
+cmd>diskpart>list disk>select disk(0,1,3)>creste partition  primary>format fs=NTFS quick>assingn letter=F>exit
+
+bcdedit    #conferir se o hypervisor launchtype está off quando auto pode acarretar problema para o virtual box
+bcdedit /set hypervisorlaunchtype off #para tirar do automático
+
+Win7 erro ao tentar ativar o windows número excedido..D307>executar>cmd>slmgr -rearm
+
+Se não funcionar win+r>regedit>hkeyl_local_machine>software>Microsoft>windows NT>currentversion>softwareprotectioplatform>skiprearm> dados do valor altere para 0 ou 1. Reiniciei e tente ativar o windows novamente.
+
+Reinicia spooler de impressão
+CMD como admin 
+net stop spooler
+net start spooler
+
+Pc mais rápido configuração avançadas do sistema>desempenho>melhor desempenho>marcar mostrar miniaturas em vez de ícones>fontes de tela cantos arredondados
