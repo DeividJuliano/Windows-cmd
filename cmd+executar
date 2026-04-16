@@ -1,5 +1,5 @@
 winget upgrade --all  #atualizar todos os programas 
- ncpa.cpl (propriedades do adaptador de redes)
+ ncpa.cpl #propriedades do adaptador de redes#
 control userpasswords2(chamar o controle de usuário via interface)
 nslookup  xxxx ou nome do host(dns servidor)
 arp -a (lista todos os hosts Mac da rede)
@@ -13,7 +13,7 @@ netstat –n (conexões ativas)
 netstat –s (Exibe estatística por protocolo)
 netstat –p (Mostra conexões para o protocolo especificado por protocolo)
 netstat –r (Exibe o conteúdo da tabela de roteamento do computador)
-netstat –s –p ip 10 ( exibir as estatísticas do protocolo IP e irá atualizá-las a cada 10 segundos ctrl+c para suspender o comando.
+netstat –s –p ip 10    #exibir as estatísticas do protocolo IP e irá atualizá-las a cada 10 segundos ctrl+c para suspender o comando
 ping xxxx -t -l 30000 (força pacotes grande)
 ping -l 96 ping.oline.net  (força pacotes grandes)
 ping -n 2 xxxxxx   (envia 2 pacotes)
@@ -27,6 +27,12 @@ netstat –a (conexôes,portas)
 route print (rotas ativas)
 ipconfig  /renew
 ipconfig  /release
+route add -p 192.168.30.0 mask 255.255.255.0 192.168.10.1  #adicionar rota para alcançar a rede 30 passando pelo 10.1
+route add -p 192.168.30.1 mask 255.255.255.255 192.168.10.1 #adicionar rota somente para um ip da rede 30 (192.168.30.1)
+route delete 192.168.30.1 192.168.10.1  #exclui a rota 
+route print #exclui a rota
+
+
 msinfo32 (informação do sistema)
 lusrmgr.msc (acessa o gerenciamento de usuários)
 tracert 8.8.8.8 (exibe rotas da origem até o destino)
