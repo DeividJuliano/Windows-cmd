@@ -74,3 +74,8 @@ net stop spooler
 net start spooler
 
 Pc mais rápido configuração avançadas do sistema>desempenho>melhor desempenho>marcar mostrar miniaturas em vez de ícones>fontes de tela cantos arredondados
+
+Wi-fi senha
+
+netsh wlan show profile
+netsh wlan show profile name="nome_da_rede" key=clear
